@@ -40,9 +40,9 @@ Keys are passed into the component or a DOM element as a prop. You should alread
 ~~~jsx
 // a list of todos, each todo object has a task and an id
 const todos = [
-  { task: "mow the yard", id: uuid() }, 
-  { task: "Work on Odin Projects", id: uuid() },
-  { task: "feed the cat", id: uuid() },
+  { task: "mow the yard", id: uuidv4() }, 
+  { task: "Work on Odin Projects", id: uuidv4() },
+  { task: "feed the cat", id: uuidv4() },
 ];
 
 function TodoList() {
@@ -72,13 +72,13 @@ function MonthList(){
 }
 ~~~
 
-<span id="anti-pattern">Keys are straightforward to use, though there is an anti-pattern you should be aware of. Keys should never be generated on the fly. Using `key={Math.random()}` or `key={uuid()}` _while_ rendering the list defeats the purpose of the list, as now a new `key` will get created for every render of the list. As shown in the above example, `key` should be inferred from the data itself.</span>
+<span id="anti-pattern">Keys are straightforward to use, though there is an anti-pattern you should be aware of. Keys should never be generated on the fly. Using `key={Math.random()}` or `key={uuidv4()}` _while_ rendering the list defeats the purpose of the list, as now a new `key` will get created for every render of the list. As shown in the above example, `key` should be inferred from the data itself.</span>
 
 ~~~jsx
 const todos = [
-  { task: "mow the yard", id: uuid() }, 
-  { task: "Work on Odin Projects", id: uuid() },
-  { task: "feed the cat", id: uuid() },
+  { task: "mow the yard", id: uuidv4() }, 
+  { task: "Work on Odin Projects", id: uuidv4() },
+  { task: "feed the cat", id: uuidv4() },
 ];
 
 function TodoList() {
@@ -86,7 +86,7 @@ function TodoList() {
       <ul>
         {todos.map((todo) => (
           // DON'T do the following i.e. generating keys during render    
-          <li key={uuid()}>{todo.task}</li>
+          <li key={uuidv4()}>{todo.task}</li>
         ))}
       </ul>
   ) 
