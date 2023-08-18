@@ -31,6 +31,7 @@ This section contains helpful links to other content. It isn't required, so cons
 
 - [This article](https://laptrinhx.com/a-practical-guide-for-jwt-authentication-using-node-js-and-express-917791379/) goes even further in depth than the one that we posted above. It provides a little greater understanding but is harder to follow.
 - [This article](https://medium.com/@paul.allies/stateless-auth-with-express-passport-jwt-7a55ffae0a5c) covers the same thing as the above one, but is a little more concise.  Might be a good reference for when you're setting this up on your own later.
+- Check out [this great guide](https://www.digitalocean.com/community/tutorials/api-authentication-with-json-web-tokensjwt-and-passport) on setting up a well-organized RESTful API with Express that incorporates JWT and Passport for user signup, login, and authentication while separating concerns into discrete modules.  Do note, in step 6, "Verifying the JWT," their JWTstrategy extracts the token from the request using URL query parameters, but there are other options, too, which you can read about in [the passport-jwt docs](https://www.passportjs.org/packages/passport-jwt/#extracting-the-jwt-from-the-request).
 - Not everyone agrees that JWTs are the best way to store authentication data. [This video](https://www.youtube.com/watch?v=JdGOb7AxUo0) is one argument against using them, and some of the pitfalls that you may encounter with using them.
 
 
